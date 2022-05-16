@@ -41,8 +41,8 @@ class СardApplicationTest {
     public void testWithCssSelector() {
         driver.get("http://localhost:9999");
 
-        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Вера-Мира У");
-        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+71111111111");
+        driver.findElement(By.cssSelector("[data-test-id=\"name\"] input")).sendKeys("Вера-Мира У");
+        driver.findElement(By.cssSelector("[data-test-id=\"phone\"] input")).sendKeys("+71111111111");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.tagName("button")).click();
 
